@@ -11,13 +11,13 @@ class Main2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-
+        //regresa al menu principal
         button2.setOnClickListener {
             val intent: Intent = Intent(  this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
-
+        //Se crea el contacto con la informacion ingresada por el usuario
         button3.setOnClickListener {
             if((currentName.text.toString().length!=0)and(currentPhone.text.toString().length==8)and(currentPhone.text.toString().length!=0)) {
                 var currentContact: Contact =

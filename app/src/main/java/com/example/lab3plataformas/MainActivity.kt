@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         //Se utiliza adapter para agregar el arreglo al listview
         var adapter = ArrayAdapter(this, R.layout.listview_item, MyApplication.contactArray)
         contactList.adapter = adapter
-
+        //Al seleccionar un contacto se va a la activity de ver usuario
         contactList.setOnItemClickListener {
                 parent: AdapterView<*>?, view: View?, position: Int, id: Long ->
             MyApplication.selectedPosition = position
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        //Esta funcion va a la activity de crear un usuario
         button.setOnClickListener {
 
             val intent: Intent = Intent(  this, Main2Activity::class.java)
